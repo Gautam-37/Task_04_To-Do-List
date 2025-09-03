@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📝 My To-Do Lists</h1>
+      <p>Stay organized and productive</p>
+    </header>
+
+    <div class="controls">
+      <div class="list-controls">
+        <input type="text" id="listNameInput" placeholder="Create new list...">
+        <button onclick="createList()">Create List</button>
+        <select id="listSelect" onchange="updateSelectedList()">
+          <option value="">Select a list...</option>
+        </select>
+      </div>
+      
+      <div class="task-input-section">
+        <input type="text" id="taskInput" class="task-input" placeholder="Add a new task...">
+        <input type="datetime-local" id="taskDateTime" class="datetime-input">
+        <button onclick="addTask()" class="add-task-btn">Add Task</button>
+      </div>
+    </div>
+
+    <div class="lists-container" id="listsContainer">
+      <div class="empty-state">
+        <h3>No lists created yet</h3>
+        <p>Create your first list to get started!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
